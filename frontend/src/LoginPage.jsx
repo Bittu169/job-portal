@@ -15,12 +15,13 @@ export default function LoginPage() {
 
     const formData = new FormData(e.target);
     const json = Object.fromEntries(formData);
+    const URL = import.meta.env.VITE_API_URL;
 
     setLoading(true);
     setMessage("");
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/login/", {
+      const res = await fetch(`${URL}/login/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(json),

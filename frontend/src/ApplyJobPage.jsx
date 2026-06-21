@@ -7,7 +7,7 @@ export default function ApplyJobPage() {
 
   const username = localStorage.getItem("username");
   const userId = localStorage.getItem("userId");
-
+  const URL = import.meta.env.VITE_API_URL;
   async function applyJobAction() {
     try {
       if (!userId) {
@@ -18,7 +18,7 @@ export default function ApplyJobPage() {
       }
 
       const response = await fetch(
-        "http://127.0.0.1:8000/apply/",
+        `${URL}/apply/`,
         {
           method: "POST",
           headers: {

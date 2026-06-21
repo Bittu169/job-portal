@@ -8,11 +8,11 @@ export default function JobListPage() {
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-
+  const URL = import.meta.env.VITE_API_URL;
   const username = localStorage.getItem("username");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/jobs/")
+    fetch(`${URL}/jobs/`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch jobs");

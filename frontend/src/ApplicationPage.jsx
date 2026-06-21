@@ -9,9 +9,9 @@ export default function ApplicationPage() {
 
     const [applications, setApplications] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const URL = import.meta.env.VITE_API_URL;
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/my_applications/${userId}/`)
+        fetch(`${URL}/my_applications/${userId}/`)
             .then((res) => res.json())
             .then((data) => {
                 setApplications(data);
