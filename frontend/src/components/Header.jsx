@@ -69,7 +69,7 @@ export default function Header() {
             <NavLink
               to={isAuthenticated ? "/jobs" : "#"}
               onClick={handleProtectedClick}
-              className="hover:text-blue-700"
+              className="hover:text-blue-700 cursor-pointer" 
             >
               Jobs
             </NavLink>
@@ -80,7 +80,7 @@ export default function Header() {
                   setShowPopup(true);
                 }
               }}
-              className="hover:text-blue-700"
+              className="hover:text-blue-700 cursor-pointer"
             >
               Companies
             </button>
@@ -88,14 +88,14 @@ export default function Header() {
             {isAuthenticated ? (
               <NavLink
                 to="/applications"
-                className="hover:text-blue-700"
+                className="hover:text-blue-700 cursor-pointer"
               >
                 My Applications
               </NavLink>
             ) : (
               <button
                 onClick={() => setShowPopup(true)}
-                className="hover:text-blue-700"
+                className="hover:text-blue-700 cursor-pointer"
               >
                 My Applications
               </button>
@@ -147,7 +147,7 @@ export default function Header() {
                 <NavLink
                   to="/applications"
                   onClick={() => setShowMenu(false)}
-                  className="block px-4 py-3 hover:bg-gray-100"
+                  className="block cursor-pointer px-4 py-3 hover:bg-gray-100"
                 >
                   📄 My Applications
                 </NavLink>
@@ -155,14 +155,14 @@ export default function Header() {
                 <NavLink
                   to="/jobs"
                   onClick={() => setShowMenu(false)}
-                  className="block px-4 py-3 hover:bg-gray-100"
+                  className="block cursor-pointer px-4 py-3 hover:bg-gray-100"
                 >
                   💼 Browse Jobs
                 </NavLink>
 
                 <button
                   onClick={logout}
-                  className="w-full text-left px-4 py-3 hover:bg-red-50 text-red-600"
+                  className="w-full cursor-pointer text-left px-4 py-3 hover:bg-red-50 text-red-600"
                 >
                   🚪 Logout
                 </button>
@@ -198,7 +198,7 @@ export default function Header() {
 
                 <button
                   onClick={() => setShowPopup(false)}
-                  className="flex-1 py-2 border rounded-lg hover:bg-gray-100"
+                  className="flex-1 py-2 cursor-pointer border rounded-lg hover:bg-gray-100"
                 >
                   Cancel
                 </button>
@@ -211,7 +211,7 @@ export default function Header() {
                       navigate("/login");
                     }
                   }}
-                  className="flex-1 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800"
+                  className="flex-1 py-2 cursor-pointer bg-blue-700 text-white rounded-lg hover:bg-blue-800"
                 >
                   Login
                 </button>

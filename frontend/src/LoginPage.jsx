@@ -128,7 +128,7 @@ export default function LoginPage() {
             {/* BUTTON */}
             <button
               disabled={loading}
-              className={`w-full py-2.5 rounded-lg font-semibold transition ${loading
+              className={`w-full py-2.5 rounded-lg font-semibold transition cursor-pointer ${loading
                   ? "bg-blue-400 cursor-not-allowed"
                   : "bg-blue-700 hover:bg-blue-800"
                 } text-white`}
