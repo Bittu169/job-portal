@@ -44,8 +44,7 @@ The system follows a **REST API architecture** with a clean separation between f
 ![Job Page](https://github.com/Bittu169/job-portal/blob/ce06b2fb0362db989050879acf923fe019b1f66b/Screenshot%202026-06-22%20123030.png?raw=true)
 
 ### 📄 Apply Page
-![Apply Page](https://github.com/Bittu169/job-portal/blob/ce06b2db989050879acf923fe019b1f66b/Screenshot%202026-06-22%20123050.png?raw=true)
-
+![Apply Page](https://github.com/Bittu169/job-portal/blob/022a8ed8e2d1f60fe08c193d2823289ad85960ff/Screenshot%202026-06-22%20123050.png?raw=true)
 ---
 
 ## 🛠️ Tech Stack
