@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [showMenu, setShowMenu] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -203,7 +204,13 @@ export default function Header() {
                 </button>
 
                 <button
-                  onClick={() => navigate("/login")}
+                  onClick={() => {
+                    if (location.pathname === "/login") {
+                      setShowPopup(false);
+                    } else {
+                      navigate("/login");
+                    }
+                  }}
                   className="flex-1 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800"
                 >
                   Login
