@@ -89,6 +89,7 @@ The system follows a **REST API architecture** with a clean separation between f
 
 ## 📂 Project Structure
 frontend/ → React (Vite)
+
 backend/ → Django REST API
 
 
