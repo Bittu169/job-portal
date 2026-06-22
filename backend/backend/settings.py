@@ -83,10 +83,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     default="postgresql://job_portal_db_czz9_user:9vPtC3Br0XEhgL8vWZEFMnX5SeO4XdOi@dpg-d8ruo94m0tmc739pu7o0-a/job_portal_db_czz9"
 # )
 
-DATABASE_URL = config(
-    "DATABASE_URL",
-    default="postgresql://job_portal_db_czz9_user:9vPtC3Br0XEhgL8vWZEFMnX5SeO4XdOi@dpg-d8ruo94m0tmc739pu7o0-a.oregon-postgres.render.com/job_portal_db_czz9"
-)
+DATABASE_URL = config("DATABASE_URL")
 
 DATABASES = {
     'default': dj_database_url.parse(
